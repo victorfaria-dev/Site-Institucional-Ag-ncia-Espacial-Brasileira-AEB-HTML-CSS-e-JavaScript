@@ -1,0 +1,552 @@
+/* ===========================================================
+   AEB — Agência Espacial Brasileira | style.css
+   Projeto acadêmico — Desenvolvimento Web
+   =========================================================== */
+
+/* -----------------------------------------------------------
+   1. RESET BÁSICO
+----------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* -----------------------------------------------------------
+   2. BASE / TIPOGRAFIA
+----------------------------------------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  color: #1b2430;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #0a2540;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.15rem;
+}
+
+p {
+  color: #5b6b7e;
+}
+
+/* -----------------------------------------------------------
+   3. UTILITÁRIO DE LAYOUT
+----------------------------------------------------------- */
+.centro {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.rotulo {
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: #00b4d8;
+  margin-bottom: 0.8rem;
+}
+.rotulo-escuro {
+  color: #009c3b;
+}
+
+.cabecalho-secao {
+  max-width: 640px;
+  margin-bottom: 2.5rem;
+}
+
+.texto-introducao {
+  margin-top: 0.8rem;
+  font-size: 1.02rem;
+}
+
+.botao {
+  display: inline-block;
+  padding: 0.85rem 1.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+.botao-principal {
+  background: #00b4d8;
+  color: #0a2540;
+}
+.botao-principal:hover {
+  background: #2fc6e8;
+}
+.botao-secundario {
+  border: 1px solid #9fb3c8;
+  color: #eaf1f8;
+}
+.botao-secundario:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* -----------------------------------------------------------
+   4. CABEÇALHO E MENU
+----------------------------------------------------------- */
+.cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #ffffffbc;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.cabecalho-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #eaf1f8;
+}
+.marca-icone {
+  color: #00b4d8;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.link-menu {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #1b2430;
+}
+.link-menu:hover { color: #00b4d8; }
+
+.link-menu.destaque {
+  background: #00b4d8;
+  color: #0a2540;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+
+/* -----------------------------------------------------------
+   5. BANNER INICIAL
+----------------------------------------------------------- */
+.banner {
+  background: #0a2540;
+  color: #eaf1f8;
+  padding: 140px 0 5rem;
+}
+
+.banner-grade {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.banner-coluna {
+  flex: 1;
+  min-width: 280px;
+}
+
+.banner-titulo {
+  font-size: 3rem;
+  line-height: 1.15;
+  color: #eaf1f8;
+}
+
+.banner-paragrafo {
+  margin-top: 1rem;
+  max-width: 540px;
+  color: #9fb3c8;
+  font-size: 1.05rem;
+}
+
+.banner-botoes {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.banner-video {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  min-width: 260px;
+}
+
+/* -----------------------------------------------------------
+   6. TIRA DE NÚMEROS
+----------------------------------------------------------- */
+.secao-numeros {
+  background: #123a63;
+  color: #eaf1f8;
+  padding: 3rem 0;
+}
+.grade-numeros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.numero-item {
+  text-align: center;
+}
+.numero-grande {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.1rem;
+  color: #00b4d8;
+  font-weight: 700;
+}
+.numero-texto {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: #9fb3c8;
+}
+
+/* -----------------------------------------------------------
+   7. SEÇÕES GERAIS
+----------------------------------------------------------- */
+.secao {
+  padding: 5rem 0;
+}
+
+.secao-escura {
+  background: #0a2540;
+  color: #eaf1f8;
+}
+
+/* -----------------------------------------------------------
+   8. SOBRE
+----------------------------------------------------------- */
+.grade-cartoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.cartao {
+  background: #ebeff6;
+  border: 1px solid #e1e7ef;
+  border-radius: 10px;
+  padding: 1.75rem;
+}
+.cartao h3 {
+  margin-bottom: 0.6rem;
+}
+.cartao p {
+  font-size: 0.95rem;
+}
+
+.lista-valores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.lista-valores li {
+  font-size: 0.8rem;
+  background: #ebeff6;
+  color: #0a2540;
+  padding: 0.35rem 0.7rem;
+  border-radius: 20px;
+  border: 1px solid #e1e7ef;
+}
+
+.imagem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding: 1rem 1.75rem;
+}
+
+/* Linha do tempo */
+.linha-tempo {
+  margin-top: 5rem;
+}
+.linha-tempo-titulo {
+  margin-bottom: 1.75rem;
+}
+
+.lista-tempo {
+  border-left: 2px solid #e1e7ef;
+  padding-left: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.lista-tempo li {
+  position: relative;
+}
+.data-tempo {
+  font-weight: 700;
+  color: #0a2540;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.lista-tempo p {
+  font-size: 0.95rem;
+}
+
+/* -----------------------------------------------------------
+   9. PROGRAMAS
+----------------------------------------------------------- */
+.grade-programas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.cartao-programa {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.75rem;
+  border-top: 3px solid #00b4d8;
+  box-shadow: 0 2px 8px rgba(10, 37, 64, 0.06);
+}
+.categoria {
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: #009c3b;
+  text-transform: uppercase;
+}
+.cartao-programa h3 {
+  margin: 0.5rem 0 0.6rem;
+  font-size: 1.05rem;
+}
+.cartao-programa p {
+  font-size: 0.92rem;
+}
+
+/* -----------------------------------------------------------
+   10. LOCALIZAÇÃO
+----------------------------------------------------------- */
+.grade-localizacao {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+address {
+  display: block;
+  margin-top: 1.75rem;
+  font-style: normal;
+  color: #1b2430;
+  line-height: 1.7;
+}
+
+.lista-localizacao {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: #5b6b7e;
+}
+
+.mapa-localizacao {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e1e7ef;
+}
+.mapa-localizacao iframe {
+  display: block;
+}
+
+/* -----------------------------------------------------------
+   11. CONTATO
+----------------------------------------------------------- */
+.grade-contato {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3rem;
+}
+
+
+.formulario {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.linha {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.linha-completa {
+  grid-column: 1 / -1;
+}
+
+.linha label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0a2540;
+}
+.opcional {
+  font-weight: 400;
+  color: #5b6b7e;
+}
+
+.linha input,
+.linha select,
+.linha textarea {
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #e1e7ef;
+  border-radius: 6px;
+  background: #f5f7fb;
+  color: #1b2430;
+}
+.linha input:focus,
+.linha select:focus,
+.linha textarea:focus {
+  border-color: #00b4d8;
+}
+
+.erro {
+  font-size: 0.78rem;
+  color: #d64545;
+  min-height: 1em;
+}
+
+.acoes-formulario {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.sucesso {
+  font-size: 0.9rem;
+  color: #009c3b;
+  font-weight: 600;
+}
+
+/* -----------------------------------------------------------
+   12. RODAPÉ
+----------------------------------------------------------- */
+.rodape {
+  background: #071a2e;
+  color: #9fb3c8;
+  padding: 3rem 0 1.75rem;
+  position: relative;
+}
+
+.rodape-conteudo {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.marca-rodape {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #eaf1f8;
+}
+.marca-rodape p {
+  color: #9fb3c8;
+  font-size: 0.85rem;
+  max-width: 280px;
+}
+.marca-rodape .marca-icone {
+  color: #00b4d8;
+   mix-blend-mode: screen;
+}
+
+.menu-rodape {
+  display: flex;
+  gap: 1.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.menu-rodape a:hover {
+  color: #eaf1f8;
+}
+
+.info-rodape {
+  text-align: right;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.botao-topo {
+  position: fixed;
+  right: 1.75rem;
+  bottom: 1.75rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #00b4d8;
+  color: #0a2540;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(10, 37, 64, 0.2);
+  z-index: 90;
+}
+.botao-topo.visivel {
+  display: flex;
+}
